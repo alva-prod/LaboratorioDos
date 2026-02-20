@@ -5,7 +5,7 @@ import { Loading } from './Loading'
 import { useFetch } from '../hooks/useFetch'
 
 const CustomHook = () => {
-    const { counter, decrement, increment,reset } = useCounter(1);
+    const { counter, decrement, increment, reset } = useCounter(1);
     const { data, hasError, isLoading } = useFetch(`https://pokeapi.co/api/v2/pokemon/${counter}`)
 
     return (

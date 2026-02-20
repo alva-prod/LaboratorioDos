@@ -14,5 +14,12 @@ export const useCounter = (initialValue = 10) => {
     const reset = () => {
         setCounter(initialValue);
     };
-    return { counter, increment, decrement, reset };
+
+    const random = () => {
+        const min = 1
+        const max = 101
+        const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;   
+        setCounter( getRandomInt() )
+    }
+    return { counter, increment, decrement, reset, random };
 };
